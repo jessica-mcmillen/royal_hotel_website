@@ -59,7 +59,8 @@
 /* Add a different background color to the active button */
 
 .btn.activeBtn {
-    color: #d4af37;
+    text-decoration: underline;
+    text-decoration-color: #d4af37;
 }
 
 .imageClass {
