@@ -213,12 +213,6 @@ function booking() {
         roomRate = totalNights * podFourCost;
     }
 
-    //add check in date to unavailable dates as only one pod
-    unavailableDatesPods.push(checkInDate);
-
-    //update unavailable dates in local storage
-    localStorage.setItem("unavailableDates", JSON.stringify(unavailableDatesPods));
-
     //convert string to number
     bookingTotal = parseInt(bookingTotal, 10);
     breakfastTotal = parseInt(breakfastTotal, 10);
