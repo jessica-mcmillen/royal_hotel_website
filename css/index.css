@@ -99,7 +99,7 @@ h1:before {
     border-style: solid;
     width: 50%;
     cursor: pointer;
-    color: white;
+    color: black;
     border-radius: 25px;
     animation: glowing 1300ms infinite;
     padding-top: 1%;
@@ -125,7 +125,7 @@ h1:before {
     border-color: #d4af37;
     border-style: solid;
     cursor: pointer;
-    color: white;
+    color: black;
     border-radius: 25px;
 }
 
