@@ -4,7 +4,7 @@ function validateForm() {
     if (validCardName() && validCardNumber() && validMonth() && validYear() && validCVV()) {
         var checkin = localStorage.getItem("checkInDate");
         window.alert(checkin)
-
+        checkin = checkin.toString();
         var unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates"));
         window.alert(unavailableDatesPodsStored)
             //add check in date to unavailable dates as only one pod
