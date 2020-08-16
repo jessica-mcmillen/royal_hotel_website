@@ -120,9 +120,7 @@ select:focus {
 }
 
 .header a:hover {
-    text-decoration: underline;
-    text-decoration-color: #d4af37;
-    /* color: #d4af37; */
+    color: #d4af37;
 }
 
 .header a.active {
