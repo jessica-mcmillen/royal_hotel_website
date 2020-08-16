@@ -134,7 +134,6 @@ select:focus {
 
 .header .offers {
     color: black;
-    background-color: #d4af37;
 }
 
 
@@ -163,7 +162,7 @@ select:focus {
     font-size: 17px;
     border: none;
     outline: none;
-    color: #ffdc73;
+    color: #d4af37;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -197,7 +196,7 @@ select:focus {
 }
 
 .dropdown-content a:hover {
-    color: #ffdc73;
+    color: #d4af37;
 }
 
 .dropdown:hover .dropdown-content {
@@ -205,7 +204,7 @@ select:focus {
 }
 
 .dropdown:hover {
-    color: #ffdc73;
+    color: #d4af37;
 }
 
 .dropdown-content a {
