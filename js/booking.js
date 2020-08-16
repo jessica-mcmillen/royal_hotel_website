@@ -109,7 +109,6 @@ function displayRoomDetails() {
 //run when search button clicked
 function searchBooking() {
     unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates")); //get unavailable dates stored in array in local storage
-    window.alert(unavailableDatesPodsStored)
     calculateTotalPeople(); // call function
     //check if dates aren't selected
     if ((checkInDate == null) || (checkOutDate == null)) {
