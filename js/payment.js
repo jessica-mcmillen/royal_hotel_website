@@ -8,7 +8,7 @@ function validateForm() {
         var unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates"));
         window.alert(unavailableDatesPodsStored)
             //add check in date to unavailable dates as only one pod
-        unavailableDatesPodsStored.push(checkInDate);
+        unavailableDatesPodsStored.push(checkin);
         window.alert(unavailableDatesPodsStored)
             //update unavailable dates in local storage
         localStorage.setItem("unavailableDates", JSON.stringify(unavailableDatesPodsStored));
