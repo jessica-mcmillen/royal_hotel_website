@@ -113,6 +113,7 @@ function searchBooking() {
     //check if dates aren't selected
     if ((checkInDate == null) || (checkOutDate == null)) {
         window.alert("Please select dates");
+        location.reload(); // refresh page
     } else if (checkInDate == checkOutDate) { //check if dates are the same
         window.alert("Please select at least one night");
         location.reload(); // refresh page
