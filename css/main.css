@@ -135,6 +135,25 @@ select:focus {
 .header .offers {
     color: black;
     background-color: #d4af37;
+    animation: glowing 1300ms infinite;
+}
+
+
+/*Glow around buttons on offer */
+
+@keyframes glowing {
+    0% {
+        background-color: #d4af37;
+        box-shadow: 0 0 5px #FFDF00;
+    }
+    50% {
+        background-color: #d4af37;
+        box-shadow: 0 0 20px #FFDF00;
+    }
+    100% {
+        background-color: #d4af37;
+        box-shadow: 0 0 5px #FFDF00;
+    }
 }
 
 

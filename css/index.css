@@ -151,7 +151,7 @@ select:focus {
 }
 
 
-/*Glow around buttons on parallax */
+/*Glow around buttons on overlay button */
 
 @keyframes glowing {
     0% {
