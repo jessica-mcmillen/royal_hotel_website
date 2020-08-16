@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Purchase Gift Voucher - Royal Hotel</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/purchaseGift.css">
+    <script src="../js/purchaseGift.js"></script>
+    <script src="../js/paymentValidation.js"></script>
+    <script src="../js/personalDetailsValidation.js"></script>
+</head>
+
+<body onload="displayCountries()">
+    <div class="header">
+        <div class="container">
+            <img src="../media/logo.png" alt="Logo" width="10%" height="10%">
+            <div class="overlay">
+                <div class="container">
+                    <div class="search-container">
+                        <input type="text" id="search" class="search" placeholder="Search..." name="search">
+                        <button id="searchInput" type="submit" onclick="search()" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="book-container">
+                        <button class="book" onclick="window.location='accomodation.html'">BOOK NOW <i class="fa fa-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <a href="index.html">HOME</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ACCOMODATION <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="accomodation.html">Hotel</a>
+                        <a href="pods.html">Glamping Pods</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">DINING <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="afternoonTea.html">Afternoon Tea</a>
+                        <div class="sub-dropdown">
+                            <button class="dropbtn">Drinks <i class="fa fa-caret-right"></i></button>
+                            <div class="sub-dropdown-content">
+                                <a href="../media/menus/beveragesMenu.pdf">Beverage Menu</a>
+                                <a href="../media/menus/wineMenu.pdf">Wine Menu</a>
+                            </div>
+                        </div>
+                        <a href="restaurant.html">Royal Kitchen & Bar</a>
+                    </div>
+                </div>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">OUR STORY</a>
+                <a href="contact.html">CONTACT US</a>
+                <a class="offers" href="offers.html">OFFERS</a>
+            </div>
+        </div>
+    </div>
+    <div class="top"></div>
+    <div class="title">PURCHASE GIFT VOUCHER</div><br>
+    <div class="text">Please provide payment details for this booking below.</div>
+    <br>
+    <div class="row2">
+        <div class="column2">
+            <div class="form-centre">
+                <div class="form-container">
+                    <form id="detailsForm">
+                        <div class="row">
+                            <div class="col-25">
+                                <b>Voucher Amount £</b><span class="asterisk">*</span> </label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="voucher" class="input" name="voucher" autofocus>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname">First Name<span class="asterisk">*</span>  </label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname" class="input" name="fname" autofocus>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Last Name<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname" class="input" name="lname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="email" class="input" name="email">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="address">Address<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="address" class="input" name="address">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="city">City<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="city" class="input" name="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="postcode">Postcode<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="postcode" class="input" name="postcode">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="country">Country<span class="asterisk">*</span></label>
+                            </div>
+                            <div class="col-75">
+                                <select id='country' name='country'></select>
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="form-centre">
+                <div class="form-container">
+                    <form name="form" id="paymentForm">
+                        <label for="cards">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <label for="cardName">Name On Card<span class="asterisk">*</span> </label>
+                        <input type="text" id="cardName" name="cardName" class="input" autofocus>
+                        <label for="cardNum">Credit Card Number<span class="asterisk">*</span> </label>
+                        <input type="text" id="cardNum" name="cardNum" class="input" placeholder="1111222233334444">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="expMonth">Expiry Month<span class="asterisk">*</span> </label>
+                                <select id="expMonth" name="expMonth">
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+                            <div class="col-50">
+                                <label for="expYear">Expiry Year<span class="asterisk">*</span> </label>
+                                <select id="expYear" name="expYear">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="cvv">CVV<span class="asterisk">*</span> </label>
+                                <input type="text" id="cvv" name="cvv" class="input" placeholder="111">
+                            </div>
+                            <div class="col-50"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">
+                            </div>
+                            <div class="col-50">
+                                <button type="button" onclick="validateForm()" class="buttonStyle">PURCHASE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Royal Hotel</h2>
+                        <p>80 Clooney Road<br> Ballymena
+                            <br> Co Antrim<br>N.Ireland<br>BT42 2PW<br> <b>Tel:</b> +44(0)28 2535 5673<br><b>Email:</b> info@royalhotel.com</p>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <ul>
+                            <li><a href="https://goo.gl/maps/Rq5zZcEmzG26jFnj7">Location</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="giftVouchers.html">Gift Vouchers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="siteMap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a id="social-icon" href="https://www.facebook.com" class="fa fa-facebook" title="Facebook"></a>
+                        <a id="social-icon" href="https://www.instagram.com" class="fa fa-instagram" title="Instagram"></a>
+                        <a id="social-icon" href="https://www.twitter.com" class="fa fa-twitter" title="Twitter"></a>
+                        <a id="social-icon" href="https://www.snapchat.com" class="fa fa-snapchat" title="Snapchat"></a>
+                        <br>
+                        <p>&copy; 2020 Royal Hotel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

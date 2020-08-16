@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glamping Pods - Royal Hotel</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pods.css">
+    <script src="../js/pods.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="../media/logo.png" alt="Logo" width="10%" height="10%">
+            <div class="overlay">
+                <div class="container">
+                    <div class="search-container">
+                        <input type="text" id="search" class="search" placeholder="Search..." name="search">
+                        <button id="searchInput" type="submit" onclick="search()" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="book-container">
+                        <button class="book" onclick="window.location='accomodation.html'">BOOK NOW <i class="fa fa-calendar"></i></button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-main">
+                <a href="index.html">HOME</a>
+                <div class="dropdown">
+                    <button class="dropbtn" style="color:#d4af37;">ACCOMODATION <i class=" fa fa-caret-down active "></i></button>
+                    <div class="dropdown-content ">
+                        <a href="accomodation.html ">Hotel</a>
+                        <a href="pods.html ">Glamping Pods</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">DINING <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="afternoonTea.html">Afternoon Tea</a>
+                        <div class="sub-dropdown">
+                            <button class="dropbtn">Drinks <i class="fa fa-caret-right"></i></button>
+                            <div class="sub-dropdown-content">
+                                <a href="../media/menus/beveragesMenu.pdf">Beverage Menu</a>
+                                <a href="../media/menus/wineMenu.pdf">Wine Menu</a>
+                            </div>
+                        </div>
+                        <a href="restaurant.html">Royal Kitchen & Bar</a>
+                    </div>
+                </div>
+                <a href="gallery.html ">GALLERY</a>
+                <a href="about.html ">OUR STORY</a>
+                <a href="contact.html ">CONTACT US</a>
+                <a class="offers " href="offers.html ">OFFERS</a>
+            </div>
+        </div>
+    </div>
+    <div class="top"></div>
+    <div class="container">
+        <div class="title">GLAMPING PODS</div><br>
+        <div class="text">We are excited to introduce our brand new glamping pods available from March 2020.
+            <br>Set in the countryside a short drive from the hotel, we have created a quiet escape to help our guests relax and enjoy the simpler things again.
+            <br>Have a look below at what you can expect and book your stay with us now!</div>
+        <br>
+        <div class="row2">
+            <div class="column2">
+                <ul>
+                    <li> <i class='fa fa-check check-icon'></i> Private hot tub for duration of stay (15.00 – 21.00) (two night stays 10.30 – 21.00)</li>
+                    <li> <i class='fa fa-check check-icon'></i> Each lodge can sleep 4 persons</li>
+                    <li> <i class='fa fa-check check-icon'></i> Fully glazed gable end to soak up countryside views</li>
+                    <li> <i class='fa fa-check check-icon'></i> Fully equipped ensuite</li>
+                    <li> <i class='fa fa-check check-icon'></i> Kitchenette (Fridge, kettle, toaster, microwave, sink, cutlery, crockery & glassware</li>
+                    <li> <i class='fa fa-check check-icon'></i> Wide screen TV</li>
+                    <li> <i class='fa fa-check check-icon'></i> Double bed, plus a double sofa bed (All bedding & towels provided)</li>
+                    <li> <i class='fa fa-check check-icon'></i> Use of communal sauna on site/ wi-fi/ games room/ play park</li>
+                    <li> <i class='fa fa-check check-icon'></i> Outdoor patio furniture with a charcoal BBQ pit (byo charcoal)</li>
+                    <li> <i class='fa fa-check check-icon'></i> Check in 15.00 – 18.00 (early Check in Available of 1pm for an additional £20)</li>
+                    <li> <i class='fa fa-check check-icon'></i> Check out 10.30 (late check out of mid day available for an additional £20)</li>
+                </ul>
+                <br>
+                <table>
+                    <tr>
+                        <td>2 Persons</td>
+                        <td>£150 PN</td>
+                    </tr>
+                    <tr>
+                        <td>3 Persons</td>
+                        <td>£139 PN</td>
+                    </tr>
+                    <tr>
+                        <td>4 Persons</td>
+                        <td>£129 PN</td>
+                    </tr>
+                </table>
+                <br>
+                <button class="bookBtn" onclick="bookingRedirect('Pods')">BOOK NOW</button>
+            </div>
+            <div class="column2">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img src="../media/galleryImages/glampingPods/podHotTub.jpg" class="slide" alt="Pod Hot Tub">
+                    </div>
+                    <div class="slides fade">
+                        <img src="../media/galleryImages/glampingPods/podInside.jpg" class="slide" alt="Inside of Pod">
+                    </div>
+                    <div class="slides fade">
+                        <img src="../media/galleryImages/glampingPods/podInside2.jpg" class="slide" alt="Inside of Pod">
+                    </div>
+                    <div class="slides fade">
+                        <img src="../media/galleryImages/glampingPods/podOutside.jpeg" class="slide" alt="Outside of Pod">
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Royal Hotel</h2>
+                        <p>80 Clooney Road<br> Ballymena
+                            <br> Co Antrim<br>N.Ireland<br>BT42 2PW<br> <b>Tel:</b> +44(0)28 2535 5673<br><b>Email:</b> info@royalhotel.com</p>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <ul>
+                            <li><a href="https://goo.gl/maps/Rq5zZcEmzG26jFnj7">Location</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="giftVouchers.html">Gift Vouchers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="siteMap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a id="social-icon" href="https://www.facebook.com" class="fa fa-facebook" title="Facebook"></a>
+                        <a id="social-icon" href="https://www.instagram.com" class="fa fa-instagram" title="Instagram"></a>
+                        <a id="social-icon" href="https://www.twitter.com" class="fa fa-twitter" title="Twitter"></a>
+                        <a id="social-icon" href="https://www.snapchat.com" class="fa fa-snapchat" title="Snapchat"></a>
+                        <br>
+                        <p>&copy; 2020 Royal Hotel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

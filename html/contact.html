@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - Royal Hotel</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body onload="displayCountries()">
+    <div class="header">
+        <div class="container">
+            <img src="../media/logo.png" alt="Logo" width="10%" height="10%">
+            <div class="overlay">
+                <div class="container">
+                    <div class="search-container">
+                        <input type="text" id="search" class="search" placeholder="Search..." name="search">
+                        <button id="searchInput" type="submit" onclick="search()" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="book-container">
+                        <button class="book" onclick="window.location='accomodation.html'">BOOK NOW <i class="fa fa-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <a href="index.html">HOME</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ACCOMODATION <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="accomodation.html">Hotel</a>
+                        <a href="pods.html">Glamping Pods</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">DINING <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="afternoonTea.html">Afternoon Tea</a>
+                        <div class="sub-dropdown">
+                            <button class="dropbtn">Drinks <i class="fa fa-caret-right"></i></button>
+                            <div class="sub-dropdown-content">
+                                <a href="../media/menus/beveragesMenu.pdf">Beverage Menu</a>
+                                <a href="../media/menus/wineMenu.pdf">Wine Menu</a>
+                            </div>
+                        </div>
+                        <a href="restaurant.html">Royal Kitchen & Bar</a>
+                    </div>
+                </div>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">OUR STORY</a>
+                <a class="active" href="contact.html">CONTACT US</a>
+                <a class="offers" href="offers.html">OFFERS</a>
+            </div>
+        </div>
+    </div>
+    <div class="top"></div>
+    <div class="container">
+        <div class="title">We are Always Here to Answer Your Queries</div>
+        <br>
+        <div class="row3">
+            <div class="column3">
+                <i class='fa fa-phone contact-icons'></i>
+                <hr>
+                <div class="title-column">PHONE</div>
+                <div class="body-column">+44(0)28 2535 5673</div>
+            </div>
+            <div class="column3"> <button style="border:none; background-color: white;" onclick="window.location = 'https\u003A//goo.gl/maps/Rq5zZcEmzG26jFnj7'"><i class=' fa fa-map-marker contact-icons'></i></button>
+                <hr>
+                <div class="title-column">ADDRESS</div>
+                <div class="body-column">80 Clooney Road <br>Ballymena <br>Co Antrim <br>N.Ireland <br>BT42 2PW</div>
+            </div>
+            <div class="column3"> <a class="mailto" href="mailto:info@royalhotel.com" alt="Mail to"><i class='fa fa-envelope contact-icons'></i></a>
+                <hr>
+                <div class="title-column">EMAIL</div>
+                <div class="body-column">info@royalhotel.com</div>
+            </div>
+        </div>
+        <div class="form-centre">
+            <div class="form-container">
+                <div class="title-column">ENQUIRE</div>
+                <br>
+                <form name="form" id="contactForm">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">Your Email<span class="asterisk">*</span>  </label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" id="email" class="input" name="email" autofocus>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name<span class="asterisk">*</span>  </label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" class="input" name="fname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name<span class="asterisk">*</span></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" class="input" name="lname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Country<span class="asterisk">*</span></label>
+                        </div>
+                        <div class="col-75">
+                            <select id='country' name='country'></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="message">Your Enquiry/ Message<span class="asterisk">*</span></label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="message" name="message" style="height:200px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <button type="button" class="submit" onclick="validateForm()">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Royal Hotel</h2>
+                        <p>80 Clooney Road<br> Ballymena
+                            <br> Co Antrim<br>N.Ireland<br>BT42 2PW<br> <b>Tel:</b> +44(0)28 2535 5673<br><b>Email:</b> info@royalhotel.com</p>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <ul>
+                            <li><a href="https://goo.gl/maps/Rq5zZcEmzG26jFnj7">Location</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="giftVouchers.html">Gift Vouchers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="siteMap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a id="social-icon" href="https://www.facebook.com" class="fa fa-facebook" title="Facebook"></a>
+                        <a id="social-icon" href="https://www.instagram.com" class="fa fa-instagram" title="Instagram"></a>
+                        <a id="social-icon" href="https://www.twitter.com" class="fa fa-twitter" title="Twitter"></a>
+                        <a id="social-icon" href="https://www.snapchat.com" class="fa fa-snapchat" title="Snapchat"></a>
+                        <br>
+                        <p>&copy; 2020 Royal Hotel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/search.js"></script>
+    <script src="../js/contact.js "></script>
+    <script src="../js/personalDetailsValidation.js "></script>
+</body>
+
+</html>

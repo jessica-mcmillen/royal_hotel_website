@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royal Hotel</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="../media/logo.png" alt="Logo" width="10%" height="10%">
+            <div class="overlay">
+                <div class="container">
+                    <div class="search-container">
+                        <label for="search"></label>
+                        <input type="text" id="search" class="search" placeholder="Search..." name="search">
+                        <button id="searchInput" type="submit" onclick="search()" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="book-container">
+                        <button class="book" onclick="window.location='accomodation.html'">BOOK NOW <i class="fa fa-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <a class="active" href="index.html">HOME</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ACCOMODATION <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="accomodation.html">Hotel</a>
+                        <a href="pods.html">Glamping Pods</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">DINING <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="afternoonTea.html">Afternoon Tea</a>
+                        <div class="sub-dropdown">
+                            <button class="dropbtn">Drinks <i class="fa fa-caret-right"></i></button>
+                            <div class="sub-dropdown-content">
+                                <a href="../media/menus/beveragesMenu.pdf">Beverage Menu</a>
+                                <a href="../media/menus/wineMenu.pdf">Wine Menu</a>
+                            </div>
+                        </div>
+                        <a href="restaurant.html">Royal Kitchen & Bar</a>
+                    </div>
+                </div>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">OUR STORY</a>
+                <a href="contact.html">CONTACT US</a>
+                <a class="offers" href="offers.html">OFFERS</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="parallax1"></div>
+    <div class="container">
+        <h1>&nbsp;&nbsp;&nbsp;Welcome to Royal Hotel&nbsp;&nbsp;&nbsp;</h1>
+        <div class="welcome-text">Set in the seaside harbour with stunning countryside views, Royal Hotel is proud to host families and couples experiences of relaxation and tranquility. The hotel is renowned for its quality of service and high quality food using local produce.
+            The hotel is located in Northern Ireland, adjacent to the spectacular Glens of Antrim and on the Causeway Coast, both recognised for their outstanding scenery. Dependent upon our guests’ interests or requirements, our staff members take the
+            time to find what they are looking for, ensuring that they leave with happy memories of the Province.</div>
+    </div>
+    <div class="parallax_container" id="parallax2">
+        <div class="parallax_overlay">
+            <div class="overlay-text">
+                Check out our new Glamping Pods<br>
+                <div style="font-size: 25px; padding-top: 3%;">Perfect for Summer!</div><br>
+                <button class="parallax-button" type="button" onclick="window.location='pods.html'">~ GLAMPING PODS ~</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="signup">
+            <h1>&nbsp;&nbsp;&nbsp;Exclusive Offers&nbsp;&nbsp;&nbsp;</h1>
+            Follow us on our social media to see our exclusive offers and promotions or enter your email address to join our mailing list.<br><br>
+            <label for="email"></label>
+            <input type="text" id="email" class="email-input" placeholder="Your Email" name="email" required> <button class="signupBtn" onclick="validEmail()">SIGN UP <i class="fa fa-envelope"></i></button>
+        </div>
+    </div>
+    <div class="parallax_container" id="parallax3">
+        <div class="parallax_overlay">
+            <div class="overlay-text">
+                GIFT VOUCHERS<br>
+                <div style="font-size: 25px; padding-top: 3%;">Treat someone special all year round!</div><br>
+                <button class="parallax-button" type="button" onclick="window.location='giftVouchers.html'">~ PURCHASE NOW ~</button>
+            </div>
+        </div>
+    </div>
+    <div class="white-gap"></div>
+    <div class="footer">
+        <div class="container"></div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Royal Hotel</h2>
+                        <p>80 Clooney Road<br> Ballymena
+                            <br> Co Antrim<br>N.Ireland<br>BT42 2PW<br> <b>Tel:</b> +44(0)28 2535 5673<br><b>Email:</b> info@royalhotel.com</p>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <ul>
+                            <li><a href="https://goo.gl/maps/Rq5zZcEmzG26jFnj7">Location</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="giftVouchers.html">Gift Vouchers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="siteMap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a href="https://www.facebook.com" class="fa fa-facebook social" title="Facebook"></a>
+                        <a href="https://www.instagram.com" class="fa fa-instagram social" title="Instagram"></a>
+                        <a href="https://www.twitter.com" class="fa fa-twitter social" title="Twitter"></a>
+                        <a href="https://www.snapchat.com" class="fa fa-snapchat social" title="Snapchat"></a>
+                        <br>
+                        <p>&copy; 2020 Royal Hotel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    position: relative;
+}
+
+
+/* Style overlay box */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: initial;
+}
+
+
+/*Style book now button */
+
+.book-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #d4af37;
+    font-size: 17px;
+    border-color: #d4af37;
+    border-style: solid;
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+}
+
+.book-container button:hover {
+    opacity: 0.7;
+}
+
+
+/* Style search */
+
+.header .search-container {
+    float: right;
+}
+
+.header .search {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25px;
+    width: 300px;
+}
+
+ ::placeholder {
+    color: #d3d3d3;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ffffff;
+    font-size: 17px;
+    border-color: black;
+    border-style: solid;
+    cursor: pointer;
+    color: black;
+    border-radius: 25px;
+}
+
+.header .search-container button:hover {
+    color: #d4af37;
+}
+
+.search:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #d4af37;
+}
+
+button:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.header-main {
+    padding-top: 50px;
+    float: right;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a:hover {
+    color: #ffdc73;
+}
+
+.header a.active {
+    color: #d4af37;
+}
+
+.active {
+    color: #d4af37;
+}
+
+.header .offers {
+    color: white;
+    background-color: #d4af37;
+}
+
+
+/* Style dropdown */
+
+.dropdown {
+    float: left;
+}
+
+.dropdown a:hover {
+    color: #ffdc73;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown .dropbtn:hover {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #ffdc73;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: auto;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 1;
+    top: 40%;
+    left: 100%;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #ffdc73;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover {
+    color: #ffdc73;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.sub-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+    .dropdown {
+        float: none;
+    }
+    .sub-dropdown {
+        float: none;
+    }
+    .dropdown-content {
+        position: relative;
+    }
+    .sub-dropdown-content {
+        position: relative;
+    }
+    .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.white-gap {
+    padding-top: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding-left: 10%;
+    height: 200px;
+    text-align: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d3d3d3;
+}
+
+.social {
+    padding-top: 20px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.top {
+    height: 200px;
+}
+
+
+/* width */
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Style breadcrumbs */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: #ffdc73;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #ddd;
+    content: ">";
+}
+
+ul.breadcrumb li a {
+    color: #ffdc73;
+    text-decoration: none;
+}
+
+ul li.inactive {
+    color: #ddd;
+}
+
+ul.breadcrumb li a:hover {
+    color: #ffdc73;
+    text-decoration: underline;
+}
+
+.title {
+    font-family: Didot, serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mainText {
+    font-size: 16px;
+}
+
+.list {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.footer-fixed {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -200px;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer-fixed,
+.page-wrap:after {
+    height: 200px;
+}
+
+html,
+body {
+    height: 100%;
+}

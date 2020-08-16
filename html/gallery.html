@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery - Royal Hotel</title>
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body onload="filterSelection('all')">
+    <div class="header">
+        <div class="container">
+            <img src="../media/logo.png" alt="Logo" width="10%" height="10%">
+            <div class="overlay">
+                <div class="container">
+                    <div class="search-container">
+                        <input type="text" id="search" class="search" placeholder="Search..." name="search">
+                        <button id="searchInput" type="submit" onclick="search()" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="book-container">
+                        <button class="book" onclick="window.location='accomodation.html'">BOOK NOW <i class="fa fa-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <a href="index.html">HOME</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ACCOMODATION <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="accomodation.html">Hotel</a>
+                        <a href="pods.html">Glamping Pods</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">DINING <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="afternoonTea.html">Afternoon Tea</a>
+                        <div class="sub-dropdown">
+                            <button class="dropbtn">Drinks <i class="fa fa-caret-right"></i></button>
+                            <div class="sub-dropdown-content">
+                                <a href="../media/menus/beveragesMenu.pdf">Beverage Menu</a>
+                                <a href="../media/menus/wineMenu.pdf">Wine Menu</a>
+                            </div>
+                        </div>
+                        <a href="restaurant.html">Royal Kitchen & Bar</a>
+                    </div>
+                </div>
+                <a class="active" href="gallery.html">GALLERY</a>
+                <a href="about.html">OUR STORY</a>
+                <a href="contact.html">CONTACT US</a>
+                <a class="offers" href="offers.html">OFFERS</a>
+            </div>
+        </div>
+    </div>
+    <div class="top"></div>
+    <div class="container">
+        <hr>
+        <div id="btnContainer">
+            <button class="btn activeBtn" onclick="filterSelection('all')"> All</button>
+            <button class="btn" onclick="filterSelection('afternoonTea')"> Afternoon Tea</button>
+            <button class="btn" onclick="filterSelection('glampingPods')"> Glamping Pods</button>
+            <button class="btn" onclick="filterSelection('hotel')"> Hotel</button>
+            <button class="btn" onclick="filterSelection('restaurant')"> Restaurant</button>
+            <button class="btn" onclick="filterSelection('rooms')"> Rooms</button>
+        </div>
+        <hr>
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <div class="row1">
+            <div class="column1 rooms">
+                <div class="content">
+                    <img id="image1" class="imageClass" src="../media/galleryImages/rooms/double.jpg" alt="Deluxe Double" style="width:100%;max-width:600px">
+                </div>
+            </div>
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image2" class="imageClass" src="../media/galleryImages/rooms/bathroom.jpg " alt="Bathroom " style="width:100%;max-width:600px">
+                </div>
+            </div>
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image3" class="imageClass" src="../media/galleryImages/rooms/doubleSmall.jpg " alt="Double Room " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image4" class="imageClass" src="../media/galleryImages/rooms/bathroomSmall.jpg " alt="Small Bathroom " style="width:100% ">
+                </div>
+            </div>
+
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image4" class="imageClass" src="../media/galleryImages/rooms/twin.jpg " alt="Twin Room " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image5" class="imageClass" src="../media/galleryImages/rooms/juniorSuite.jpg " alt="Junior Suite " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 rooms ">
+                <div class="content ">
+                    <img id="image6" class="imageClass" src="../media/galleryImages/rooms/bathroomLuxury.jpg " alt="Luxury Bathroom " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 afternoonTea ">
+                <div class="content ">
+                    <img id="image7" class="imageClass" src="../media/galleryImages/afternoonTea/afternoonTea.jpg " alt="Afternoon Tea for Two " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 afternoonTea ">
+                <div class="content ">
+                    <img id="image8" class="imageClass" src="../media/galleryImages/afternoonTea/afternoonTeaFancy.jpg " alt="Afternoon Tea with Champagne " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 afternoonTea ">
+                <div class="content ">
+                    <img id="image9" class="imageClass" src="../media/galleryImages/afternoonTea/afternoonTea2.jpg " alt="Afternoon Tea in Front of Fire " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 afternoonTea ">
+                <div class="content ">
+                    <img id="image10" class="imageClass" src="../media/galleryImages/afternoonTea/afternoonTeaSmall.jpg " alt="Afternoon Tea for One " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 glampingPods ">
+                <div class="content ">
+                    <img id="image11" class="imageClass" src="../media/pod.jpg " alt="Outside of Pod " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 glampingPods ">
+                <div class="content ">
+                    <img id="image12" class="imageClass" src="../media/galleryImages/glampingPods/podInside.jpg " alt="Inside of Pod " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 glampingPods ">
+                <div class="content ">
+                    <img id="image13" class="imageClass" src="../media/galleryImages/glampingPods/podOutside.jpeg " alt="Outside of Pod " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 glampingPods ">
+                <div class="content ">
+                    <img id="image14" class="imageClass" src="../media/galleryImages/glampingPods/podHotTub.jpg " alt="View from Hot Tub " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 glampingPods ">
+                <div class="content ">
+                    <img id="image15" class="imageClass" src="../media/galleryImages/glampingPods/podInside2.jpg " alt="Inside of Pod " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image16" class="imageClass" src="../media/galleryImages/hotel/gardenRoom.jpg " alt="Garden Room " style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image17" class="imageClass" src="../media/galleryImages/hotel/hotelBar.jpg " alt="Hotel Bar" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image18" class="imageClass" src="../media/galleryImages/hotel/hotelLobby.jpg " alt="Hotel Lobby" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image19" class="imageClass" src="../media/galleryImages/hotel/pond.jpg " alt="Hotel Pond" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image20" class="imageClass" src="../media/galleryImages/hotel/garden.jpg " alt="Hotel Garden" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 hotel ">
+                <div class="content ">
+                    <img id="image21" class="imageClass" src="../media/galleryImages/hotel/harbour.jpg " alt="Harbour" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image22" class="imageClass" src="../media/galleryImages/restaurant/restaurant1.jpg " alt="Dining Room" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image23" class="imageClass" src="../media/galleryImages/restaurant/food1.jpg " alt="Dining Experience" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image24" class="imageClass" src="../media/galleryImages/restaurant/outsideEating.jpg " alt="Outside Dining" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image25" class="imageClass" src="../media/galleryImages/restaurant/food3.jpg " alt="Dining Experience" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image27" class="imageClass" src="../media/galleryImages/restaurant/restaurant2.jpg " alt="Large Dining Room" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image28" class="imageClass" src="../media/galleryImages/restaurant/food2.png " alt="Dining Experience" style="width:100% ">
+                </div>
+            </div>
+            <div class="column1 restaurant ">
+                <div class="content ">
+                    <img id="image29" class="imageClass" src="../media/galleryImages/restaurant/breakfast.jpg " alt="Dining Experience" style="width:100% ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <h2>Royal Hotel</h2>
+                        <p>80 Clooney Road<br> Ballymena
+                            <br> Co Antrim<br>N.Ireland<br>BT42 2PW<br> <b>Tel:</b> +44(0)28 2535 5673<br><b>Email:</b> info@royalhotel.com</p>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <ul>
+                            <li><a href="https://goo.gl/maps/Rq5zZcEmzG26jFnj7">Location</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="giftVouchers.html">Gift Vouchers</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="siteMap.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a id="social-icon" href="https://www.facebook.com" class="fa fa-facebook" title="Facebook"></a>
+                        <a id="social-icon" href="https://www.instagram.com" class="fa fa-instagram" title="Instagram"></a>
+                        <a id="social-icon" href="https://www.twitter.com" class="fa fa-twitter" title="Twitter"></a>
+                        <a id="social-icon" href="https://www.snapchat.com" class="fa fa-snapchat" title="Snapchat"></a>
+                        <br>
+                        <p>&copy; 2020 Royal Hotel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
