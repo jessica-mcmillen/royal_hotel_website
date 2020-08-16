@@ -134,7 +134,6 @@ select:focus {
 
 .header .offers {
     color: black;
-    background-color: #d4af37;
     animation: glowing 1300ms infinite;
 }
 
