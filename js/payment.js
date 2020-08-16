@@ -2,8 +2,8 @@
 function validateForm() {
     //Call functions from paymentValidation.js file, if all return true then redirect
     if (validCardName() && validCardNumber() && validMonth() && validYear() && validCVV()) {
-        var checkin = localStorage.getItem("checkInDate");
-        window.alert(checkin)
+        // var checkin = localStorage.getItem("checkInDate");
+        window.alert("hi");
 
         var unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates"));
         window.alert(unavailableDatesPodsStored)
