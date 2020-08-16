@@ -124,8 +124,9 @@ select:focus {
 }
 
 .header a.active {
-    text-decoration: underline;
-    text-decoration-color: #d4af37;
+    /* text-decoration: underline;
+    text-decoration-color: #d4af37; */
+    color: #a67c00;
 }
 
 .active {
