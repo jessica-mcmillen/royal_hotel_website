@@ -334,7 +334,11 @@ p {
 }
 
 .bottom {
-    height: 200px;
+    height: 250px;
+}
+
+.bottomC {
+    height: 320px;
 }
 
 
