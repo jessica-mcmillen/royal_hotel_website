@@ -60,6 +60,13 @@ function calculateTotalNights() {
     localStorage.setItem("totalNights", totalNights); //set total nights in local storage
 }
 
+function updateUnavailableDates() {
+    var newUnavailableDate = localStorage.getItem("unavailableDate"); //get date stored after confirmation
+    unavailableDatesPods.push(newUnavailableDate); //add unavailable date to array
+    localStorage.setItem("unavailableDates", JSON.stringify(unavailableDatesPods)); //update local storage array
+    unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates")); //get unavailable dates stored in array in local storage
+}
+
 //display room details depending on what user selects
 function displayRoomDetails() {
     calculateTotalPeople(); //call function
@@ -108,11 +115,7 @@ function displayRoomDetails() {
 
 //run when search button clicked
 function searchBooking() {
-    var newUnavailableDate = localStorage.getItem("unavailableDate");
-    unavailableDatesPods.push(newUnavailableDate);
-    localStorage.setItem("unavailableDates", JSON.stringify(unavailableDatesPods));
-    unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates")); //get unavailable dates stored in array in local storage
-    unavailableDatesPodsStored = JSON.parse(localStorage.getItem("unavailableDates")); //get unavailable dates stored in array in local storage
+    updateUnavailableDates();
     calculateTotalPeople(); // call function
     //check if dates aren't selected
     if ((checkInDate == null) || (checkOutDate == null)) {
@@ -129,9 +132,7 @@ function searchBooking() {
         }
     } else {
         unavailable.style.display = "none"; //div "unavailable" hidden until condition met 
-        alert(unavailableDatesPodsStored)
         if (room == "Pods") {
-            alert(unavailableDatesPodsStored)
             if (unavailableDatesPods.indexOf(checkInDate) >= 0) {
                 unavailable.style.display = "block"; //display unavailable info
             } else if (unavailableDatesPodsStored.indexOf(checkInDate) >= 0) {
