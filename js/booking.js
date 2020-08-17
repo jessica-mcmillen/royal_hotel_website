@@ -125,6 +125,7 @@ function searchBooking() {
         }
     } else {
         unavailable.style.display = "none"; //div "unavailable" hidden until condition met 
+        alert(unavailableDatesPodsStored)
         if (room == "Pods") {
             if (unavailableDatesPods.indexOf(checkInDate) >= 0) {
                 unavailable.style.display = "block"; //display unavailable info
