@@ -115,7 +115,7 @@ function displayRoomDetails() {
 
 //run when search button clicked
 function searchBooking() {
-    updateUnavailableDates();
+    updateUnavailableDates(); //call function
     calculateTotalPeople(); // call function
     //check if dates aren't selected
     if ((checkInDate == null) || (checkOutDate == null)) {
